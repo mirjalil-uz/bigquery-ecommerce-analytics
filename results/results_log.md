@@ -47,4 +47,6 @@ Queries run on **2026-09-29** in project "My Project 47999".
 - Query 8E (August 2026 revenue by category from the partitioned table): 26 categories, total **$368,843.36**
 - **Reconciliation:** matches August 2026 revenue in query 02 exactly ($368,843.36) ✅ — the fact table is correct
 - Top August categories: Outerwear & Coats $48,520.49, Jeans $40,499.18, Sweaters $28,991.81
-- Bytes processed (partitioned vs raw table): pending
+- Bytes processed — partitioned `fact_order_items`: **232 KB** (10 MB billed, 528 ms)
+- Bytes processed — raw `order_items` + `products`: **6.52 MB** (20 MB billed, 792 ms)
+- **~96% less data scanned (~28× less)**; saving comes from partition pruning + pre-joined columns

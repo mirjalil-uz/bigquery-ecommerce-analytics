@@ -115,6 +115,15 @@ BigQuery charges by **bytes scanned**, so the queries are written to stay cheap:
 - filter on dates early
 - the reporting table is **partitioned by `order_date`** and **clustered by `category` and `traffic_source`**. Query `08E` shows the lower "bytes processed" compared with scanning the raw table.
 
+**Measured result (query 08E vs the same query on the raw tables, August 2026 revenue by category):**
+
+| Query source | Bytes processed | Bytes billed |
+|---|---|---|
+| Raw public tables (`order_items` + `products` join) | 6.52 MB | 20 MB |
+| Partitioned + clustered `fact_order_items` | **232 KB** | 10 MB |
+
+That is **~96% less data scanned (~28× less)** for the same result. The saving comes from two design choices: **partition pruning** (only August's partitions are read) and a **pre-joined fact table** (no scan of `products`). Bytes billed are higher than processed because BigQuery bills a 10 MB minimum per table referenced.
+
 The whole project runs within BigQuery's free tier (1 TB of queries per month).
 
 ## Limitations & next steps
