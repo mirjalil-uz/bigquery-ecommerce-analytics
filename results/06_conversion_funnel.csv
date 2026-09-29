@@ -1,0 +1,7 @@
+traffic_source,sessions,product_view_sessions,cart_sessions,purchase_sessions,view_to_cart_pct,cart_to_purchase_pct,session_conversion_pct
+,37834,37655,29750,21546,79.0,72.4,56.9
+Email,16976,16894,13312,9660,78.8,72.6,56.9
+Adwords,11482,11430,9048,6542,79.2,72.3,57.0
+YouTube,3761,3742,2995,2135,80.0,71.3,56.8
+Facebook,3708,3687,2914,2134,79.0,73.2,57.6
+Organic,1907,1902,1481,1075,77.9,72.6,56.4

@@ -1,0 +1,11 @@
+distribution_center,items_shipped,avg_days_to_ship,avg_days_in_transit,p90_days_order_to_delivery,return_rate_pct
+Charleston SC,3825,0.5,2.5,5.8,16.3
+Los Angeles CA,3868,0.5,2.5,5.9,16.2
+Philadelphia PA,3890,0.5,2.5,5.9,15.7
+Port Authority of New York/New Jersey NY/NJ,3682,0.6,2.6,6.0,15.5
+New Orleans LA,2880,0.6,2.5,5.9,15.2
+Memphis TN,5485,0.5,2.5,5.9,15.2
+Mobile AL,4138,0.5,2.5,5.9,15.2
+Chicago IL,5512,0.5,2.5,5.8,15.1
+Houston TX,5293,0.6,2.5,6.0,15.1
+Savannah GA,2705,0.5,2.4,5.8,15.0
