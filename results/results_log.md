@@ -42,5 +42,9 @@ Queries run on **2026-09-29** in project "My Project 47999".
 - Return rate 15.0% (Savannah GA) – 16.3% (Charleston SC)
 - Note: 07 return rate = returned ÷ shipped items; 03 = returned ÷ non-cancelled items → different denominators
 
-## 08 — Partitioning cost check
-- Not run yet
+## 08 — Reporting layer & partitioning check
+- All 6 statements succeeded: dataset `ecommerce_analytics`, partitioned + clustered table `fact_order_items`, and 3 views
+- Query 8E (August 2026 revenue by category from the partitioned table): 26 categories, total **$368,843.36**
+- **Reconciliation:** matches August 2026 revenue in query 02 exactly ($368,843.36) ✅ — the fact table is correct
+- Top August categories: Outerwear & Coats $48,520.49, Jeans $40,499.18, Sweaters $28,991.81
+- Bytes processed (partitioned vs raw table): pending

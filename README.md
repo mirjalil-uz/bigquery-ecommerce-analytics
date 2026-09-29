@@ -71,6 +71,7 @@ bigquery-ecommerce-analytics/
 - 125,588 orders, 182,295 order items, 100,000 customers and 2.44M website events — **no duplicate keys** in any table.
 - Found **future-dated records** (up to Oct 2, 2026, after the run date), so all analysis uses complete months only.
 - **Reconciliation:** total category revenue (query 03) matches the monthly KPI total (query 02) **to the cent: $2,833,914.23**.
+- **Reporting layer check:** August 2026 revenue from the new partitioned table (query 08E) matches query 02 exactly (**$368,843.36**), confirming the fact table is correct.
 
 **1. Revenue is growing fast with a stable margin**
 - **$2.83M revenue** from **33,436 orders** in the last 12 months — **+75.5%** vs the previous 12 months ($1.61M).
